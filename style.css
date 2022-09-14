@@ -1,0 +1,198 @@
+section:not(#three) {
+    height: 400px;
+    margin: 10px 0;
+  }
+  #one {
+    background-color: rgb(150, 150, 150);
+  }
+  #two {
+    background-color: rgb(205, 205, 205);
+  }
+  #three {
+    background-color: rgb(150, 150, 150);
+    width: 400px;
+    margin-bottom: 200px;
+  }
+  div {
+    width: 90px;
+    height: 90px;
+    border: 3px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #two div {
+    width: 175px;
+  }
+  #red {
+    background-color: red;
+  }
+  #green {
+    background-color: green;
+  }
+  #blue {
+    background-color: blue;
+  }
+  #orange {
+    background-color: orange;
+  }
+  #purple {
+    background-color: purple;
+  }
+  #brown {
+    background-color: brown;
+  }
+  p {
+    margin: 0;
+    background-color: #0C2340;
+    border: 2px solid #AE9142;
+    font-size: 30px;
+    color: #C99700;
+    text-align: center;
+  }
+  p:nth-of-type(even) {
+    color: #00843D;
+  }
+
+  /* START BELOW THIS LINE */
+
+  /* 1 */
+  #one{
+    display: flex;
+    /* 2 */
+    justify-content: flex-end;
+    /* 3 */
+    flex-direction: column;
+    /* 4 */
+    align-items: center;
+
+  }
+  
+  #two{
+    /* 5 */
+    display: flex;
+    /* 6 */
+    align-items: center;
+    /* 7 */
+    justify-content: space-between;
+    /* 8 */
+    flex-wrap: wrap;
+    
+  }
+  #three{
+    /* 9 */
+    display: grid;
+    /* 10 */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(4, 1fr) */
+    /* grid-template-columns: repeat(4, 25%) */
+    /* 11 */
+    /* grid-template-rows: repeat(2, 100px) not correct you would need to go through each row*/
+    /* grid-auto-rows should be used when less information is given */
+    grid-auto-rows: 100px;
+
+  }
+
+  #one{
+    /* Bonus 1 */
+    flex-direction: column-reverse;
+  }
+    /* Bonus 2 */
+  #orange{
+    order: 0;
+  }
+  #brown{
+    order: -1;
+  }
+
+    /* Bonus 3 */
+  #brown{
+    align-self: flex-start;
+  }
+
+  #purple{
+    align-self: flex-end;
+  }
+
+
+    /* Bonus 4 */
+
+  #p-one{
+    /* grid-column-start: 1; */
+    /* grid-column-end: 3; */
+    /* or */
+    /* shorthand */
+    /* grid-column: 1/3; */
+    /* or */
+    grid-area: One;
+
+
+
+
+  }
+  #p-two{
+    /* grid-column-start: 3; */
+    /* grid-column-end: 5; */
+    grid-area: Two;
+    
+  }
+  #p-three{
+    /* grid-row-start: 2; */
+    /* grid-row-end: 4; */
+    grid-area: Three;
+    
+  }
+  #p-four{
+    /* grid-row-start: 2; */
+    /* grid-row-end: 4; */
+
+    /* grid-column-start: 2; */
+    /* grid-column-end: 4;
+     */
+    grid-area: Four; 
+    
+  }
+  #p-five{
+    /* grid-row-start: 2; */
+    /* grid-row-end: 5; */
+    grid-area: Five;
+    
+  }
+  #p-six{
+    /* grid-row-start: 4; */
+    /* grid-row-end: 5; */
+
+    /* grid-column-start: 1; */
+    /* grid-column-end: 4; */
+    grid-area: Six;
+    
+  }
+  #p-seven{
+    /* grid-row-start: 5; */
+    /* grid-row-end: 6; */
+    grid-area: Seven;
+    
+  }
+  #p-eight{
+    /* grid-row-start: 5; */
+    /* grid-row-end: 6; */
+
+    /* grid-column-start: 2; */
+    /* grid-column-end: 5; */
+    grid-area: Eight;
+    
+  }
+
+  #three{
+    /* Has to be a string inside "" */
+    grid-template-areas: 
+    "One One Two Two"
+    "Three Four Four Five"
+    "Three Four Four Five"
+    "Six Six Six Five"
+    "Seven Eight Eight Eight";
+  }
